@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Encriptador</title>
 </head>
-<body>
+<body>  
+    <div class="container">
+        <img src="./assets/Logo.png" alt="Logo" class="logo__container"/>
+        <div class="left__container">
+                <textarea type="text" id="inputValue" placeholder="Ingrese el texto aqui" class="textarea__container" pattern="[A-Za-z]{3}"></textarea>
+                <div>
+                <div class="p1__container">
+                    <img src="./assets/exclamation.png"/>
+                    <p id="p1">&nbspSólo letras minúsculas y sin acentos</p>
+                </div>
+                <button onclick="onClickEncryptText()" class="secondary" >Encriptar</button>
+                <button onclick="onClickDecryptText()" >Desencriptar</button>
+                </div>
+        </div>
+        <div class="right__container">
+            <img src="./assets/Muñeco.png" alt="Searching" class="image__container" id="imageDiv"/>
+            <div class="text__right">
+                <h1 id="h1Div"></h1>
+                <h2 id="h2Div">Ningún mensaje fue encontrado</h3>
+                <h3 id="h3Div">Ingresa el texto que desees encriptar o desencriptar.</h2>
+            </div>
+            <button id="copyB" onclick="copyText()" class="copyButton" >Copiar</button>
+        </div>
+    </div> 
+    <footer>
+        <p class="copyright">&copy Copyright Junior Marquez - 2024</p>
+    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
